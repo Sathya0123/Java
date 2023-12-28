@@ -1,0 +1,29 @@
+public class ConstructorsExample {
+    private int value;
+
+public ConstructorsExample() {
+        value = 0;
+    }
+
+     public ConstructorsExample(int val) {
+        this.value = val;
+    }
+    public ConstructorsExample(String strVal) {
+        this.value = Integer.parseInt(strVal);
+    }
+
+      public int getValue() {
+        return value;
+    }
+
+    public static void main(String[] args) {
+        ConstructorsExample obj1 = new ConstructorsExample(); 
+        ConstructorsExample obj2 = new ConstructorsExample(10); 
+        ConstructorsExample obj3 = new ConstructorsExample("20"); 
+
+        System.out.println("Value from obj1: " + obj1.getValue()); // Output: 0
+        System.out.println("Value from obj2: " + obj2.getValue()); // Output: 10
+        System.out.println("Value from obj3: " + obj3.getValue()); // Output: 20
+    }
+}
+
